@@ -21,8 +21,8 @@ var send = require('koa-send');
  */
 
 module.exports = function (path, opts) {
-  var base = dirname(module.parent.filename);
-
+  //var base = dirname(module.parent.filename);
+  var base = process.cwd();
   // set path relative to the directory the function was called + path
   if (!path || typeof path == 'object') {
     opts = path;
